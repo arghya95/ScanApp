@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "515334193474",
+    "firebase_url": "https://devicefinder-197311.firebaseio.com",
+    "project_id": "devicefinder-197311",
+    "storage_bucket": "devicefinder-197311.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:515334193474:android:12eaebb3c48926e6",
+        "android_client_info": {
+          "package_name": "com.desire.bleAdmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "515334193474-k14vh2ri9sk0j72j97qbdmd9c0v7jd31.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.desire.bleAdmin",
+            "certificate_hash": "aabee5dcf1f5241f95c3ae346ffccad6aae49f38"
+          }
+        },
+        {
+          "client_id": "515334193474-h8umcnf0j0ctafvj9v1h9udp1qfcssve.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMD5CjWsBvWxFe4xnjV7CYC-sk-GG0XMU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "515334193474-h8umcnf0j0ctafvj9v1h9udp1qfcssve.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
