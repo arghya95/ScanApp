@@ -113,28 +113,19 @@ export class HomePage {
         if(this.devices[j].id == this.users[i].macAddress) {
           this.count += 1
           this.getTime();
+          this.addToDatabase(i)
           
-         /*  firebase.database().ref('users/'+this.users[i].uid+'/deviceHistory/').push({
-           InTime: this.time
-          });
- */
-this.sendNotification()
-          alert('arghya device started '+this.time);
-
+          // alert('arghya device started '+this.time);
+          this.sendNotification()
         }
         else {
-          alert('not found')
+          // alert('not found')
         }
       }
       
     }
 
-    if(this.count == 1) {
-      alert('intime '+this.time);
-    }
-    else if(this.count == 2) {
-      alert('out time '+this.time)
-    }
+   
 
 
     /* const push = PushNotification.init({
@@ -169,6 +160,21 @@ this.sendNotification()
 
   }
 
+  addToDatabase(i) {
+    if(this.count == 1) {
+      alert('intime '+this.time);
+      firebase.database().ref('users/'+this.users[i].uid+'/deviceInHistory/').push({
+        InTime: this.time
+       });
+    }
+    else if(this.count == 2) {
+      alert('out time '+this.time);
+      firebase.database().ref('users/'+this.users[i].uid+'/deviceOutHistory/').push({
+        OutTime: this.time
+       });
+    }
+  }
+
 sendNotification() {
   // to check if we have permission
 this.push.hasPermission()
@@ -176,8 +182,10 @@ this.push.hasPermission()
 
   if (res.isEnabled) {
     console.log('We have permission to send push notifications');
+    alert('We have permission to send push notifications')
   } else {
     console.log('We do not have permission to send push notifications');
+    alert('We do not have permission to send push notifications')
   }
 
 });
@@ -203,7 +211,7 @@ const options: PushOptions = {
  ios: {
      alert: 'true',
      badge: true,
-     sound: 'false'
+     sound: 'true'
  },
  windows: {},
  browser: {
